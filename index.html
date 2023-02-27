@@ -36,7 +36,6 @@
 
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="css/magnific-popup.css">
-
 	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -50,14 +49,25 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+	<style>
+		@media (max-width: 767px) {
+			.normal {
+			  display: none;
+			}
+		  }
+		@media (min-width: 767px) {
+			.mobile {
+			  display: none;
+			}
+		  }
+	  </style>
 	</head>
 	<body>
 		
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/MyA3.jpg);" data-stellar-background-ratio="0.5">
+	<header id="fh5co-header" class="fh5co-cover normal" role="banner" style="background-image:url(images/FOT_5439.jpg); background-position: 0px 0px;" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -74,12 +84,31 @@
 			</div>
 		</div>
 	</header>
+	<header id="fh5co-header" class="fh5co-cover mobile" role="banner" style="background-image:url(images/FOT_5439.jpg); background-position: 400px 0px;" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1 id="invitadomobile"></h1>
+							<h2>Nos Casamos! Y nos encantaria verte en nuestra Boda!</h2>
+							<div class="simply-countdown simply-countdown-one"></div>
+							<!-- <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
 	<script>
 		const queryString = window.location.search;
 		const urlParams = new URLSearchParams(queryString);
 		const invite = urlParams.get('invite')
+		document.getElementById('invitadomobile').innerText = invite;
 		document.getElementById('invitado').innerText = invite;
 	</script>
+	<audio autoplay src="images/musica.wav"></audio>
 	<div id="fh5co-couple">
 		<div class="container">
 			<div class="row">
@@ -113,7 +142,7 @@
 		</div>
 	</div>
 
-	<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/beso.jpg);">
+	<div id="fh5co-event" class="fh5co-bg mobile" style="background-image:url(images/IMG_5632.jpg); background-position: -1000px 0px;">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -168,7 +197,61 @@
 			</div>
 		</div>
 	</div>
-
+	<div id="fh5co-event" class="fh5co-bg normal" style="background-image:url(images/IMG_5632.jpg); background-position: 0px 0px;">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>Nuestro Momento Especial</span>
+					<h2>Te esperamos</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="col-md-6 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Misa</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>6:00 PM</span>
+										<span>7:00 PM</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>Sabado 24</span>
+										<span>Junio, 2023</span>
+									</div>
+									<p class="h3">Santuario de La Purísima</p>
+									<p>6 de Diciembre 82, Santa María Tequepexpan, 45601 San Pedro Tlaquepaque, Jal.</p>
+									<a class="h4" style="color: white;" href="https://goo.gl/maps/Mo1iEmgnY21yR4Qp9">Maps</a>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
+									<h3>Fiesta</h3>
+									<div class="event-col">
+										<i class="icon-clock"></i>
+										<span>8:30 PM</span>
+										<span>2:00 AM</span>
+									</div>
+									<div class="event-col">
+										<i class="icon-calendar"></i>
+										<span>Sabado 24</span>
+										<span>Junio, 2023</span>
+									</div>
+									<p class="h3">La Opa Eventos</p>
+									<p> Av. Camino Real a Colima 117, Los Gavilanes, 45645 Los Gavilanes, Jal.</p>
+									<a class="h4" style="color: white;" href="https://goo.gl/maps/2HukrDYxeGN6ro2F9">Maps</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="fh5co-couple-story">
 		<div class="container">
 			<div class="row">
@@ -189,7 +272,7 @@
 									<!-- <span class="date">Febrero, 2013</span> -->
 								</div>
 								<div class="timeline-body">
-									<p>Mario era un chico distraido, Alejjandra una chica simpatica y hermosa, que por razones misteriosas del destino terminamos en el mismo salon de clases.  </p>
+									<p>Mario era un chico distraido, Alejandra una chica simpatica y hermosa, que por razones misteriosas del destino terminamos en el mismo salon de clases.  </p>
 								</div>
 							</div>
 						</li>
@@ -197,23 +280,23 @@
 							<div class="timeline-badge" style="background-image:url(images/MyA.jpg);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Nuestros aniversarios</h3>
+									<!-- <h3 class="timeline-title">Nuestros aniversarios</h3> -->
 									<!-- <span class="date">Junio</span> -->
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									<p>El amor llego a nuestra vida sin avisar, y el tiempo nos hizo comprender y descubrir que somos uno para el otro y que Dios es nuestro aliado mas grande para que nuestro amor se fusione.</p>
 								</div>
 							</div>
 						</li>
 						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(images/MyA6.jpg);"></div>
+							<div class="timeline-badge" style="background-image:url(images/MyA11.jfif);"></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Aun unidos</h3>
+									<!-- <h3 class="timeline-title">Aun unidos</h3> -->
 									<!-- <span class="date">January 1, 2016</span> -->
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+									<p>Somos el ejemplo vivo que Dios nos a puesto en el camino de cada uno  para cuidar uno del otro para formar nuestra familia.</p>
 								</div>
 							</div>
 						</li>
@@ -234,25 +317,31 @@
 			</div>
 			<div class="row row-bottom-padded-md">
 				<div class="col-md-12">
-					<ul id="fh5co-gallery-list">	
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA.jpg); "></li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/beso.jpg); "></li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA2.jpg); "></li> 
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA3.jpg); "></li> 
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA4.jpg); "></li> 
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA5.jpg); "></li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA6.jpg); "></li> 
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA7.jpg); "></li> 
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA8.jpg); "></li> 
-					<!-- <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA9.jpg); "></li>
-					<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA10.jpg); "></li>     -->
+					<ul id="fh5co-gallery-list">
+						<!-- <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/FOT_5046.jpg); "></li> -->
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/FOT_5098.jpg); "></li> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/FOT_5105.jpg); "></li> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA7.jpg); "></li> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/FOT_5116.jpg); "></li> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/FOT_5194.jpg); "></li> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/FOT_5365.jpg); "></li> 
+						<!-- <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/FOT_5439.jpg); "></li>  -->
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/FOT_5519.jpg); "></li> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG_5632.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA6.jpg); "></li>  
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG_5753.jpg); "></li> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG_5790.jpg); "></li> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG_5805.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG_5855.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/MyA.jpg); "></li>
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/IMG_5944.jpg); "></li>
 					</ul>		
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/MyA8.jpg);">
+	<div id="fh5co-counter" class="fh5co-bg fh5co-counter mobile" style="background-image:url(images/FOT_5519.jpg); background-position: -500px 0px;">
 		
 		<div class="container">
 			<div class="row">
@@ -266,15 +355,15 @@
 						<a href="https://www.amazon.com.mx/wedding/mario-alberto-ponce-brizuela-alejandra-gabriela-bejarano-vera-guadalajara-june-2023/registry/2Q5VGA62XKRRV" class="col-md-4 col-sm-6 animate-box">
 							<div class="feature-center">
 								<span class="icon">
-									<i class="icon-box"></i>
+									<img style="height: 100px; width: 100px; border-radius: 50%;" class="img-fluid" src="images/amazon.png">
 								</span>
 								<h2>Amazon</h2>
 							</div>
 						</a>
-						<a href="#" class="col-md-4 col-sm-6 animate-box">
+						<a href="https://meli.uniko.co/E1067/boda/alejandra_bejaranoymario_ponce_" class="col-md-4 col-sm-6 animate-box">
 							<div class="feature-center">
 								<span class="icon">
-									<i class="icon-box"></i>
+									<img style="height: 100px; width: 100px; border-radius: 50%;" class="img-fluid" src="images/MercadoLibre.png">
 								</span>
 								<h2>MercadoLibre</h2>
 							</div>
@@ -282,7 +371,47 @@
 						<a href="#" class="col-md-4 col-sm-6 animate-box">
 							<div class="feature-center">
 								<span class="icon">
-									<i class="icon-box"></i>
+									<img style="height: 100px; width: 100px; border-radius: 50%;" class="img-fluid" src="images/LiverPool.jpg">
+								</span>
+								<h2>Liverpol</h2>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="fh5co-counter" class="fh5co-bg fh5co-counter normal" style="background-image:url(images/FOT_5519.jpg); background-position: 0px 0px;">
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>Mesa de Regalos</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<a href="https://www.amazon.com.mx/wedding/mario-alberto-ponce-brizuela-alejandra-gabriela-bejarano-vera-guadalajara-june-2023/registry/2Q5VGA62XKRRV" class="col-md-4 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<img style="height: 100px; width: 100px; border-radius: 50%;" class="img-fluid" src="images/amazon.png">
+								</span>
+								<h2>Amazon</h2>
+							</div>
+						</a>
+						<a href="https://meli.uniko.co/E1067/boda/alejandra_bejaranoymario_ponce_" class="col-md-4 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<img style="height: 100px; width: 100px; border-radius: 50%;" class="img-fluid" src="images/MercadoLibre.png">
+								</span>
+								<h2>MercadoLibre</h2>
+							</div>
+						</a>
+						<a href="#" class="col-md-4 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<img style="height: 100px; width: 100px; border-radius: 50%;" class="img-fluid" src="images/LiverPool.jpg">
 								</span>
 								<h2>Liverpol</h2>
 							</div>
@@ -305,34 +434,43 @@
 				<div class="col-md-12">
 					<div class="feature-center animate-box" data-animate-effect="fadeInLeft">
 						<span class="icon">
-							<i class="icon-clock"></i>
+							<img style="height: 100px; width: 100px; border-radius: 50%;" class="img-fluid" src="images/iglesia.png">
 						</span>
 						<div class="feature-copy">
-							<h3>We Organized Events</h3>
-							<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+							<h3>Celebracion Religiosa</h3>
+							<p>Te esperamos en el Santuario de la Purisima a las 8pm, No Faltes.</p>
 						</div>
 					</div>
 
 					<div class="feature-center animate-box" data-animate-effect="fadeInLeft">
 						<span class="icon">
-							<i class="icon-image"></i>
+							<img style="height: 100px; width: 100px; border-radius: 50%;" class="img-fluid" src="images/boda.png">
 						</span>
 						<div class="feature-copy">
-							<h3>Photoshoot</h3>
-							<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+							<h3>Fiesta</h3>
+							<p>La recepcion sera a las 8:30 pm en La Opa Eventos. Recuerda que es de etiqueta el evento. </p>
 						</div>
 					</div>
 
 					<div class="feature-center animate-box" data-animate-effect="fadeInLeft">
 						<span class="icon">
-							<i class="icon-video"></i>
+							<img style="height: 100px; width: 100px; border-radius: 50%;" class="img-fluid" src="images/cena.png">
 						</span>
 						<div class="feature-copy">
-							<h3>Video Editing</h3>
-							<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+							<h3>Cena</h3>
+							<p>Para agarrar energia se servira a las 9 pm.</p>
 						</div>
 					</div>
 
+					<div class="feature-center animate-box" data-animate-effect="fadeInLeft">
+						<span class="icon">
+							<img style="height: 100px; width: 100px; border-radius: 50%;" class="img-fluid" src="images/dance.webp">
+						</span>
+						<div class="feature-copy">
+							<h3>Baile</h3>
+							<p>Terminando de Cenar te esperamos en la pista de baile toda la noche.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -341,13 +479,29 @@
 	</div>
 
 
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/MyA9.jpg);">
+	<div id="fh5co-started" class="fh5co-bg mobile" style="background-image:url(images/IMG_5855.jpg); background-position: -100px 0px;">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Confirma tu asistencia</h2>
-					<h2><a href="https://google.com"> Aqui!</a></h2>
+					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdBso5b0UcoyBb9IbM85VejXTmiZSp5EqiujPqPw5-7rY71Vw/viewform?embedded=true" width="400" height="850" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-10 col-md-offset-1">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="fh5co-started" class="fh5co-bg normal" style="background-image:url(images/IMG_5855.jpg); background-position: 0px 0px;">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Confirma tu asistencia</h2>
+					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdBso5b0UcoyBb9IbM85VejXTmiZSp5EqiujPqPw5-7rY71Vw/viewform?embedded=true" width="400" height="850" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
 				</div>
 			</div>
 			<div class="row animate-box">
